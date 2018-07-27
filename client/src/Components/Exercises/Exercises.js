@@ -1,25 +1,28 @@
 import React from 'react';
-import LeftPane from './LeftPane'
-import RightPane from './RightPane'
-import { Grid } from '@material-ui/core';
+import { Grid, Paper, Typography } from '@material-ui/core';
 
 const styles = {
     pane: {
-        padding: 20,
-        marginTop: 5,
-        marginBottom: 5,
-        margin: 10
+        padding: 20
+        // marginTop: 5,
+        // marginBottom: 5,
+        // margin: 3
     }
 }
 
-export default Exercises => 
-(
-    <Grid container>
+export default function Exercises (props) {
+    return (
+    <Grid container spacing={8}>
         <Grid item sm>
-            <LeftPane styles={styles.pane}/>
+            <Paper style={styles.pane}>
+                <Typography align="center">Left pane</Typography>
+            </Paper>
         </Grid>
         <Grid item sm>
-            <RightPane styles={styles.pane}/>
+            <Paper style={styles.pane}>
+                <Typography align="center">Right pane</Typography>
+            </Paper>
         </Grid>
     </Grid>
-)
+    )
+} 
